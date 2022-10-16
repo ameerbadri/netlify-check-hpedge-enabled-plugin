@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build && ls -l"
+  command = "npm run build && host"
   publish = ".next"
 
 [[plugins]]
