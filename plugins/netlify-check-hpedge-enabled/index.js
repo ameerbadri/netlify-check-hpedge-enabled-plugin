@@ -7,10 +7,8 @@
       console.log("Hello world from onPreBuild event in netlify-check-hpedge-enabled");
     
       // Set the rrtype for dns.resolve() method
-      const rrtype="A";
+      const rrtype="CNAME";
       // Calling dns.resolve() method for hostname
-      // geeksforgeeks.org and print them in
-      // console as a callback
       dns.resolve('www.netlifyhpedge.com', rrtype, (err, records) => console.log('records: %j', records)); 
           },
   }
