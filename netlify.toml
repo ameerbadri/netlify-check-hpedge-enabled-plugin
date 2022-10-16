@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build && host www.netlifyhpedge.com"
+  command = "npm run build"
   publish = ".next"
 
 [[plugins]]
