@@ -1,6 +1,7 @@
 // index.js
   // Accessing dns module
-  const dns = require('dns');
+  //const dns = require('dns');
+  const { dns } = require("dns");
 
   module.exports = {
     onPreBuild: () => {
