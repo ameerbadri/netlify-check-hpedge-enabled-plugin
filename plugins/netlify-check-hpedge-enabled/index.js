@@ -1,12 +1,12 @@
 // index.js
 // const { spawn } = require("child_process");
-
 const { exec } = require("child_process");
+
   module.exports = {
     onPreBuild: () => {
       console.log("Hello world from onPreBuild event in netlify-check-hpedge-enabled");
-      const ls = spawn("dig", ["www.netlifyhpedge.com"]);
 
+      // const ls = spawn("dig", ["www.netlifyhpedge.com"]);
       // ls.stdout.on("data", data => {
       //     console.log(`stdout: ${data}`);
       // });
