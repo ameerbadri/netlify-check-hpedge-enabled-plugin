@@ -10,6 +10,8 @@
       // Set the rrtype for dns.resolve() method
       const rrtype="CNAME";
       // Calling dns.resolve() method for hostname
-      dns.resolve('www.netlifyhpedge.com', rrtype, (err, records) => {console.log('error: %j', err); console.log('records: %j', records) }); 
+      var w3 = dns.resolve('www.netlifyhpedge.com', rrtype, function (err, records) {
+        console.log('error: %j', err); 
+        console.log('records: %j', records) }); 
           },
   }
