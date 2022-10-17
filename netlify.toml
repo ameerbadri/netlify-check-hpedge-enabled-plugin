@@ -3,4 +3,6 @@
   publish = ".next"
 
 [[plugins]]
-package = "/plugins/netlify-check-hpedge-enabled"
+package = "../plugins/netlify-check-hpedge-enabled"
+  [plugins.inputs]
+  siteName = "www.netlifyhpedge.com"
