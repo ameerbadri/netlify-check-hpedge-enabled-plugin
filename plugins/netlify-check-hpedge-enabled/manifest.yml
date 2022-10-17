@@ -3,4 +3,4 @@
 name: netlify-check-hpedge-enabled
 inputs:
   - name: site_name
-    description: Full domain name of the site to be check for HP Edge setup
+    description: Full domain name of the site to be checked for HP Edge setup
