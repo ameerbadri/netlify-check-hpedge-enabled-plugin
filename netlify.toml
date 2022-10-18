@@ -2,7 +2,7 @@
   command = "npm run build"
   publish = ".next"
 
-[[plugins]]
+[[context.production.plugins]]
 package = "/plugins/netlify-check-hpedge-enabled"
   [plugins.inputs]
     site_name = "mammut.com"
