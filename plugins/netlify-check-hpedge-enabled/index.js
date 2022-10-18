@@ -13,7 +13,7 @@ const checkDns = async (domain, rrtype) => {
 };
 
 module.exports = {
-  onPreBuild: async ({utils}) => {
+  onPreBuild: async ({ utils }) => {
     const url = process.env.URL;
     console.log("URL of the Site: " + url);
     const site_name = url.replace("https://", "")
@@ -49,7 +49,7 @@ module.exports = {
             summary: "Success: Site is on Netlify High Performance Edge",
             // Optional. Empty by default.
             text: "You're all set!",
-          });          
+          });
           return;
         } else {
           throw new Error();
@@ -62,7 +62,7 @@ module.exports = {
       utils.status.show({
         title: "HP Edge Setup Status",
         summary: "WARNING: Site not on HP Edge - Check your DNS configuration",
-        text: "Please contact Netlify support or your account manager to help with HP Edge setup or upgrade.",
+        text: "Please contact Netlify support or your account manager to help with HP Edge setup or an upgrade.",
       });
 
     }
