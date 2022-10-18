@@ -1,4 +1,4 @@
-# Next + Netlify Starter with Check HP Edge Enabled Build Plugin
+# Next starter app + Netlify Check HP Edge Enabled Build Plugin
 
 This is a web app demo using a custom build plugin to check if HP Edge is enabled properly. It's using the starter [Next.js](https://nextjs.org/) project. The build plugin runs at part of the Netlify build process and does the following:
 
