@@ -13,11 +13,11 @@ const checkDns = async (domain, rrtype) => {
 };
 
 module.exports = {
-  onPreBuild: async ({utils }) => {
-
+  onPreBuild: async ({utils}) => {
     const url = process.env.URL;
     console.log("URL of the Site: " + url);
     const site_name = url.replace("https://", "")
+
     try {
       //Get bare and WWW domains from inputs
       const bareDomain = site_name.includes("www")
