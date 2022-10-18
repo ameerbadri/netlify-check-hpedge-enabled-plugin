@@ -1,5 +1,3 @@
-const { domain } = require("node:process");
-
 // Accessing dns module
 const { Resolver } = require("node:dns").promises;
 
@@ -17,6 +15,7 @@ const checkDns = async (domain, rrtype) => {
 module.exports = {
   onPostBuild: async ({ inputs, utils }) => {
     try {
+      //Get bare and WWW domains from inputs
       const bareDomain = inputs.site_name.includes("www")
         ? inputs.site_name.replace("www", "")
         : `${inputs.site_name}`;
@@ -49,7 +48,6 @@ module.exports = {
         throw new Error();
       }
     } catch (error) {
-      console.log(error);
       utils.build.failBuild(
         "Build Failed - Site not on HP Edge - Check your DNS configuration"
       );
