@@ -1,6 +1,6 @@
 # Next starter app + Netlify Check HP Edge Enabled Build Plugin
 
-This is a web app demo using a custom build plugin to check if HP Edge is enabled properly. It's using the starter [Next.js](https://nextjs.org/) project. The build plugin runs at part of the Netlify build process and does the following:
+This is a web app demo using a custom build plugin to check if HP Edge is enabled properly for the site. It's using the starter [Next.js](https://nextjs.org/) project though you can use any framework. The build plugin runs as part of the Netlify build process and does the following:
 
 1. The build plugin runs as part of the Netlify site build process (enabled by settings in netlify.toml file)
 2. The plugin take the sites name (derived from the URL being built) and checks against a DNS server to confirm if the "CNAME" and "A" records are properly setup so that the site is served from the Netlify High Performance Edge network.
@@ -8,10 +8,12 @@ This is a web app demo using a custom build plugin to check if HP Edge is enable
 3. The plugin will log the results in the build logs and the deploy summary.
 ![](public/hpedge_check_plugin_deploy_summary.png)
 
-To try to plugin, click on [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ameerbadri/netlify-check-hpedge-enabled-plugin)
+## Setting up the demo
+To try this plugin, click on [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ameerbadri/netlify-check-hpedge-enabled-plugin)
 
 (If you click this button, it will create a new repo for you that looks exactly like this one, and sets that repo up immediately for deployment on Netlify)
 
+## Setting up this custom plugin for your web app
 To add this custom plugin to your own web app, follow these the steps:
   1. Copy the following to your apps netlify.toml file
 
