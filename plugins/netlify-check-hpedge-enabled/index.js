@@ -13,16 +13,20 @@ const checkDns = async (domain, rrtype) => {
 };
 
 module.exports = {
-  onPreBuild: async ({ inputs, utils }) => {
+  onPreBuild: async ({utils }) => {
+
+    const url = process.env.URL;
+    console.log("URL of the Site: " + url);
+    const site_name = url.replace("https://", "")
     try {
       //Get bare and WWW domains from inputs
-      const bareDomain = inputs.site_name.includes("www")
-        ? inputs.site_name.replace("www", "")
-        : `${inputs.site_name}`;
+      const bareDomain = site_name.includes("www")
+        ? site_name.replace("www.", "")
+        : `${site_name}`;
 
-      const wwwDomain = inputs.site_name.includes("www")
-        ? inputs.site_name
-        : `www.${inputs.site_name}`;
+      const wwwDomain = site_name.includes("www")
+        ? site_name
+        : `www.${site_name}`;
 
       const cnameRecords = await checkDns(wwwDomain, "CNAME");
       const aRecords = await checkDns(bareDomain, "A");
@@ -39,7 +43,13 @@ module.exports = {
         }, false);
 
         if (cnameCorrect && aCorrect) {
-          console.log("Site is on Netlifys High Performance Edge");
+          console.log("Site is on Netlify High Performance Edge");
+          utils.status.show({
+            title: "HP Edge Setup Status",
+            summary: "Success: Site is on Netlify High Performance Edge",
+            // Optional. Empty by default.
+            text: "You're all set!",
+          });          
           return;
         } else {
           throw new Error();
@@ -48,9 +58,13 @@ module.exports = {
         throw new Error();
       }
     } catch (error) {
-      console.log(
-        "WARNING: Site not on HP Edge - Check your DNS configuration"
-      );
+      console.log("WARNING: Site not on HP Edge - Check your DNS configuration");
+      utils.status.show({
+        title: "HP Edge Setup Status",
+        summary: "WARNING: Site not on HP Edge - Check your DNS configuration",
+        text: "Please contact Netlify support or your account manager to help with HP Edge setup or upgrade.",
+      });
+
     }
   },
 };
