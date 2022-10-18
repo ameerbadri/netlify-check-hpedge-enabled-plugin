@@ -17,7 +17,6 @@ const checkDns = async (domain, rrtype) => {
 module.exports = {
   onPostBuild: async ({ inputs, utils }) => {
     try {
-      console.log(inputs);
       const bareDomain = inputs.site_name.includes("www")
         ? inputs.site_name.replace("www", "")
         : `${inputs.site_name}`;
