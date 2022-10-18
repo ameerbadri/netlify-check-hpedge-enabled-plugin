@@ -13,7 +13,7 @@ const checkDns = async (domain, rrtype) => {
 };
 
 module.exports = {
-  onPostBuild: async ({ inputs, utils }) => {
+  onSuccess: async ({ inputs, utils }) => {
     try {
       //Get bare and WWW domains from inputs
       const bareDomain = inputs.site_name.includes("www")
