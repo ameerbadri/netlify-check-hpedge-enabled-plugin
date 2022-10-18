@@ -43,7 +43,7 @@ module.exports = {
         }, false);
 
         if (cnameCorrect && aCorrect) {
-          console.log("%cSite is on Netlify High Performance Edge", "color: green");
+          console.log("Site is on Netlify High Performance Edge");
           utils.status.show({
             title: "HP Edge Setup Status",
             summary: "Success: Site is on Netlify High Performance Edge",
@@ -58,7 +58,7 @@ module.exports = {
         throw new Error();
       }
     } catch (error) {
-      console.log("%cWARNING: Site not on HP Edge - Check your DNS configuration", "color: red");
+      console.log("WARNING: Site not on HP Edge - Check your DNS configuration");
       utils.status.show({
         title: "HP Edge Setup Status",
         summary: "WARNING: Site not on HP Edge - Check your DNS configuration",
