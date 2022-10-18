@@ -13,6 +13,7 @@ To try to plugin, click on [![Deploy to Netlify](https://www.netlify.com/img/dep
 
 To add this custom plugin to your own web app, follow these the steps:
   1. Copy the following to your apps netlify.toml file
+  
   [[context.production.plugins]]
   package = "/plugins/netlify-check-hpedge-enabled"
 
