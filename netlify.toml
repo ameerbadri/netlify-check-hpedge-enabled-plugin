@@ -5,4 +5,4 @@
 [[plugins]]
 package = "/plugins/netlify-check-hpedge-enabled"
   [plugins.inputs]
-    site_name = "www.netlifyhpedge.com"
+    site_name = "mammut.com"
