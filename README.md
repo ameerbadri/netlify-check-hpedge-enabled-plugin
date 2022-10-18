@@ -7,6 +7,14 @@ This is a web app demo using a custom build plugin to check if HP Edge is enable
  Note: In some instances if there is another CDN configured from which the requests are proxied to Netlify the results may not be accurate.
 3. The plugin will log the results in the build logs and the deploy summary.
 
-To get started, click on [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ameerbadri/netlify-check-hpedge-enabled-plugin)
+To try to plugin, click on [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ameerbadri/netlify-check-hpedge-enabled-plugin)
 
 (If you click this button, it will create a new repo for you that looks exactly like this one, and sets that repo up immediately for deployment on Netlify)
+
+To add this custom plugin to your own web app, follow these the steps:
+  1. Copy the following to your apps netlify.toml file
+  [[context.production.plugins]]
+  package = "/plugins/netlify-check-hpedge-enabled"
+
+  2. At the root of your app create a directory: /plugins/netlify-check-hpedge-enabled/
+  3. Copy files manifest.yml & index.js from this repo to your app
