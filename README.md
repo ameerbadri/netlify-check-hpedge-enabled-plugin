@@ -6,6 +6,7 @@ This is a web app demo using a custom build plugin to check if HP Edge is enable
 2. The plugin take the sites name (derived from the URL being built) and checks against a DNS server to confirm if the "CNAME" and "A" records are properly setup so that the site is served from the Netlify High Performance Edge network.
  Note: In some instances if there is another CDN configured from which the requests are proxied to Netlify the results may not be accurate.
 3. The plugin will log the results in the build logs and the deploy summary.
+![](public/hpedge_check_plugin_deploy_summary.png)
 
 To try to plugin, click on [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ameerbadri/netlify-check-hpedge-enabled-plugin)
 
