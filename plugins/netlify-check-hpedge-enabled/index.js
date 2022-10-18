@@ -48,8 +48,8 @@ module.exports = {
         throw new Error();
       }
     } catch (error) {
-      utils.build.failBuild(
-        "Build Failed - Site not on HP Edge - Check your DNS configuration"
+      console.log(
+        "WARNING: Site not on HP Edge - Check your DNS configuration"
       );
     }
   },
