@@ -4,5 +4,5 @@
 
 [[context.production.plugins]]
 package = "/plugins/netlify-check-hpedge-enabled"
-  [plugins.inputs]
+  [context.production.plugins.inputs]
     site_name = "mammut.com"
