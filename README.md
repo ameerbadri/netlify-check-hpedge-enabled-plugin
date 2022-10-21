@@ -24,3 +24,8 @@ To add this custom plugin to your own web app, follow these the steps:
 
   2. At the root of your app create a directory: /plugins/netlify-check-hpedge-enabled/
   3. Copy files manifest.yml & index.js from this repo to your app
+
+
+  ## Ideas to extend the capabilities...
+  1. You can setup so that the build plugin stops the build process if HP Edge isn't setup correctly
+  2. You can send an email/slack to inform your team with the status of the HP Edge check
