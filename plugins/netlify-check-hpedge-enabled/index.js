@@ -43,10 +43,10 @@ module.exports = {
         }, false);
 
         if (cnameCorrect && aCorrect) {
-          console.log("Site is on Netlify High Performance Edge");
+          console.log("✅ Site is on Netlify High Performance Edge");
           utils.status.show({
             title: "HP Edge Setup Status",
-            summary: "Success: Site is on Netlify High Performance Edge",
+            summary: "✅ Success: Site is on Netlify High Performance Edge",
             // Optional. Empty by default.
             text: "You're all set!",
           });
@@ -58,10 +58,10 @@ module.exports = {
         throw new Error();
       }
     } catch (error) {
-      console.log("WARNING: Site not on HP Edge - Check your DNS configuration");
+      console.log("🚨 WARNING: Site not on HP Edge - Check your DNS configuration");
       utils.status.show({
         title: "HP Edge Setup Status",
-        summary: "WARNING: Site not on HP Edge - Check your DNS configuration",
+        summary: "🚨WARNING: Site not on HP Edge - Check your DNS configuration",
         text: "Please contact Netlify support or your account manager to help with HP Edge setup or an upgrade.",
       });
 
