@@ -61,7 +61,7 @@ module.exports = {
       console.log("🚨 WARNING: Site not on HP Edge - Check your DNS configuration");
       utils.status.show({
         title: "HP Edge Setup Status",
-        summary: "🚨WARNING: Site not on HP Edge - Check your DNS configuration",
+        summary: "🚨 WARNING: Site not on HP Edge - Check your DNS configuration",
         text: "Please contact Netlify support or your account manager to help with HP Edge setup or an upgrade.",
       });
 
